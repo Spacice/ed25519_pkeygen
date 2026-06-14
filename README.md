@@ -39,6 +39,20 @@ or using the Windows batch file `start.bat`:
 ### Linux
 Terminal `keygen <prefix>`
 
+## While the program is running
+- The program uses all available processor threads.
+- Every minute, the program outputs the number of attempts and the speed of key search to the terminal and to the `keygen.log` file.
+- The program terminates when the key is found.
+- When finished, the program outputs information in the following format:
+```
+=== Key Found ===
+Public key (hex): beebee3ab03969c30980d47d7bf9d21063cfa8d252fb6daf878d45db90fd493f
+Private key (hex): 70ab6f9b1ac68ddcdbcd2131ccaaad3f50ab51ac753990d870bac678b6768a4b1d8e6707b2ab82c09034fe2307ec267cb81bc02e20153f63ae07255b8a1365bc
+Attempts: 13964442
+Time: 31.00 seconds
+Average speed: 450509.5 keys/s
+```
+
 ## Performance
 On an `AMD Ryzen 5 5600X` processor, the key search speed is about **450'000** keys per second. At this speed, the average search time is:
 - 1 hex character - instant
@@ -51,3 +65,7 @@ On an `AMD Ryzen 5 5600X` processor, the key search speed is about **450'000** k
 - 8 hex characters - 2 hours 39 minutes
 
 On an `Intel Core i7 14700K` about **1'200'000** keys per second. This is about x2.7 faster than `AMD Ryzen 5 5600X`.
+
+
+## Security
+If you're worried about running a Windows executable from the repository on your computer, analyze the source code. Then, if you've determined the code is safe, compile it according to the instructions above. Now you'll be more likely to run the program safely.
