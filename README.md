@@ -7,21 +7,18 @@ The program is designed to generate a public key for a device in the MeshCore me
 
 **Windows**
 
-- Install Git, GNU GCC compiler.
-- Clone [Sodium library](https://github.com/jedisct1/libsodium).
+- Install Git, and MinGW compiler.
 - Enter command `git clone https://github.com/Spacice/ed25519_pkeygen` in the command line.
 - Go to [Sodium releases](https://github.com/jedisct1/libsodium/releases/).
-- Download the latest release.
-- Place the `libsodium.a` of the Sodium library into the folder with the current source code.
+- Download the latest Sodium release.
+- Unzip the Sodium library release archive into the source code folder.
 - Run `compile.bat`.
 
 **Linux**
 
-Enter commands in the terminal:
 - `sudo apt install libsodium-dev`
-- `git clone https://github.com/jedisct1/libsodium`
 - `git clone https://github.com/Spacice/ed25519_pkeygen`
-- `g++ -static -O3 -o keygen -I./libsodium-master/src/libsodium/include -L. main.cpp -lsodium -lpthread`
+- `g++ -static -O3 -o keygen main.cpp -lsodium -lpthread`
 
 ## Using
 
