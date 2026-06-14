@@ -18,14 +18,20 @@ The program is designed to generate a public key for a device in the MeshCore me
 
 - `sudo apt install libsodium-dev`
 - `git clone https://github.com/Spacice/ed25519_pkeygen`
+- `cd ./ed25519_pkeygen`
 - `g++ -static -O3 -o keygen main.cpp -lsodium -lpthread`
 
 ## Using
 
 Windows command line
-`keygen.exe beebee`
+`keygen.exe beebee`*
+
+or using the Windows batch file `start.bat`:
+- Edit `start.bat`
+- Replace `beebee`* with the required prefix
+- Run `start.bat`
 
 Linux terminal
-`keygen beebee`
+`keygen beebee`*
 
-`beebee` is the prefix that needs to be generated.
+*`beebee` is the prefix that needs to be generated (maximum 8 characters).
